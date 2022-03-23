@@ -1,4 +1,6 @@
-from lib2to3.pgen2 import driver
+import os
 from selenium import webdriver
 
+# print(webdriver)
+os.environ['PATH'] += r"C:/Users/pin-d/Desktop/drivers"
 driver = webdriver.Chrome()
