@@ -7,4 +7,7 @@ driver = webdriver.Chrome(executable_path=r"C:/Users/pin-d/Desktop/drivers/chrom
 
 # Getting element
 driver.get("https://www.seleniumeasy.com/")
-driver.find_element_by_class_name('.btn.btn-success')
+button = driver.find_element_by_css_selector('.btn.btn-success')
+print(button)
+button.click()
+
