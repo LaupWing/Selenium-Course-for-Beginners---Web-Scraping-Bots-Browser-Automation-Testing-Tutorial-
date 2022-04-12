@@ -4,8 +4,8 @@ import os
 
 class Booking(webdriver.Chrome):
    def __init__(self, executable_path=const.DRIVER_PATH):
-      self.executable_path = executable_path
-      os.environ['PATH'] += self.executable_path
+      self.driver_path = executable_path
+      os.environ['PATH'] += self.driver_path
       super(Booking, self).__init__()
 
    def land_first_page(self):
