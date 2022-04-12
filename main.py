@@ -1,10 +1,11 @@
 import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
 
 # print(webdriver)
 # os.environ['PATH'] += r"C:/Users/pin-d/Desktop/drivers/chromedriver"
-driver = webdriver.Chrome(executable_path=r"C:/Users/pin-d/Desktop/drivers/chromedriver.exe")
+driver = webdriver.Chrome(ChromeDriverManager().install())
 
 driver.implicitly_wait(30) # Waits for 30 seconds but stops when it finds it
 # Getting element
