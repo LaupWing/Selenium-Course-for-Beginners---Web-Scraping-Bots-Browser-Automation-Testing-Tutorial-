@@ -1,8 +1,10 @@
-from lib2to3.pgen2 import driver
 from selenium import webdriver
-
+import booking.constants as const
 
 class Booking(webdriver.Chrome):
-   def __init__(self, driver_path=r"C:/Users/pin-d/Desktop/drivers/chromedriver.exe"):
+   def __init__(self, driver_path=const.DRIVER_PATH):
       self.driver_path = driver_path
       super(Booking, self).__init__()
+
+   def land_first_page(self):
+      self.get(const.BASE_URL)
